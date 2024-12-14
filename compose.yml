@@ -1,0 +1,9 @@
+services:
+  monitor:
+    build: monitor
+    restart: unless-stopped
+    environment:
+      - SECRETWEBHOOK=${SECRETWEBHOOK}
+      - DISCORDNAME=${DISCORDNAME}
+      - DISCORDTEXT=${DISCORDTEXT}
+      - TARGETURL=${TARGETURL}
